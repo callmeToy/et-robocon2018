@@ -2,7 +2,7 @@
 #define __SONAR_MONITOR_HH
 
 #include "SonarSensor.h"
-
+using namespace ev3api;
 class SonarMonitor{
     private:
     SonarSensor mSonarSensor;
@@ -12,7 +12,7 @@ class SonarMonitor{
 
     void sensing();
 
-    void getDistance();
+    int16_t getDistance();
 };
 
 #endif

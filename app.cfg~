@@ -1,0 +1,23 @@
+INCLUDE("app_common.cfg");
+
+#include "app.h"
+
+DOMAIN(TDOM_APP) {
+CRE_TSK(MAIN_TASK, { TA_ACT , 0, main_task, TMIN_APP_TPRI + 1, STACK_SIZE, NULL });
+CRE_TSK(BT_TASK  , { TA_NULL, 0, bt_task  , TMIN_APP_TPRI + 2, STACK_SIZE, NULL });
+}
+
+ATT_MOD("app.o");
+ATT_MOD("balancer.o");
+ATT_MOD("balancer_param.o");
+ATT_MOD("TailUnit.o");
+ATT_MOD("ColorMonitorUnit.o");
+ATT_MOD("FilteringBuffer.o");
+ATT_MOD("GyroMonitorUnit.o");
+ATT_MOD("TouchMonitorUnit.o");
+ATT_MOD("SonarMonitorUnit.o");
+ATT_MOD("ClockTimerUnit.o");
+ATT_MOD("DriveUnit.o");
+ATT_MOD("DisplayManageUnit.o");
+ATT_MOD("DriveController.o");
+ATT_MOD("ActionController.o");

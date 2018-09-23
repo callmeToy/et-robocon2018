@@ -2,7 +2,7 @@
 #define __TOUCH_MONITOR_HH
 
 #include "TouchSensor.h"
-
+using namespace ev3api;
 #define NON_DETECT_TIME 250
 class TouchMonitor{
     private:

@@ -17,7 +17,7 @@ bool TimerController::isStart(){
 }
 
 bool TimerController::isFinish(){
-    if(mTimeDuration <= clock->now()){
+    if(mTimeDuration <= mClock.now()){
         mIsStart = false;
         return true;
     }else{

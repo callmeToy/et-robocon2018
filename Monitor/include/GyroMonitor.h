@@ -2,7 +2,7 @@
 #define __GYRO_MONITOR_HH
 
 #include "GyroSensor.h"
-
+using namespace ev3api;
 class GyroMonitor{
     private:
     GyroSensor mGyroSensor;

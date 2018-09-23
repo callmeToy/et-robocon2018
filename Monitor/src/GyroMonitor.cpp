@@ -6,7 +6,7 @@ GyroMonitor::GyroMonitor(GyroSensor gyroSensor_)
 }
 
 void GyroMonitor::sensing(){
-    mAngleV = mGyroSensor.getAngleVelocity();
+    mAngleV = mGyroSensor.getAnglerVelocity();
 }
 
 int16_t GyroMonitor::getAngleV(){

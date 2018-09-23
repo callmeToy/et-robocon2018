@@ -2,7 +2,7 @@
 #define __COLOR_MONITOR_HH
 
 #include "ColorSensor.h"
-
+using namespace ev3api;
 class ColorMonitor{
   private:
     ColorSensor mColorSensor;

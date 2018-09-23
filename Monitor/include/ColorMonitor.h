@@ -1,0 +1,28 @@
+#ifndef __COLOR_MONITOR_HH
+#define __COLOR_MONITOR_HH
+
+#include "ColorSensor.h"
+using namespace ev3api;
+class ColorMonitor{
+  private:
+    ColorSensor mColorSensor;
+
+    uint8_t mAmbient;
+
+    int8_t mBrightness;
+
+    colorid_t mColorID;
+
+  public:
+    ColorMonitor(ColorSensor colorSensor_);
+    
+    void sensing();
+
+    uint8_t getAmbient();
+
+    uint8_t getBrightness();
+
+    colorid_t getColorID();
+};
+
+#endif

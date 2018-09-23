@@ -1,6 +1,7 @@
 #ifndef __TIMER_CONTROLLER_HH
 #define __TIMER_CONTROLLER_HH
 #include "Clock.h"
+using namespace ev3api;
 class TimerController{
     private:
     Clock mClock;
@@ -8,7 +9,7 @@ class TimerController{
     bool mIsStart;
     
     public:
-    TimerController(clock);
+    TimerController(Clock);
     void timerStart(uint16_t);
     bool isStart();
     bool isFinish();
